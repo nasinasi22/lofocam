@@ -1,0 +1,237 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    color: #333;
+    overflow-x: hidden; /* Hindari scroll horizontal */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* width: 100%; */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.navbar .nav-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    background-color: #0056b3;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar .icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navbar .icons a:hover {
+    color: #d1d1d1;
+}
+
+.navbar .btn-logout {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar .btn-logout:hover {
+    background-color: #c82333;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Filter Section */
+.filter-section {
+    width: 30%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.filter-section h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.filter-section input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.filter-section ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.filter-section input[type="radio"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.filter-section button {
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.filter-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Section */
+.result-section {
+    width: 70%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-section h1 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.result-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-section table th, 
+.result-section table td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.result-section table th {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.result-section table td {
+    background-color: #fff;
+    font-size: 0.95rem;
+}
+
+.result-section table td img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.result-section .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.result-section .btn-primary:hover {
+    background-color: #0056b3;
+}

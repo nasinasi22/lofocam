@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background: #007bff;
+    padding: 1rem 0;
+    color: #fff;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Jarak antara text dan button */
+}
+.navbar p {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+.navbar .btn-primary {
+    background: #fff;
+    color: #007bff;
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.navbar .btn-primary:hover {
+    background: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+/* Login Form Section */
+.login-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 1rem;
+}
+.login-form .form-container {
+    background: #f0f8ff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+}
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    color: #007bff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.login-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.login-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+.login-form .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+.login-form .form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.login-form .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.login-form .btn-primary:hover {
+    background: #0056b3;
+}
+.login-form .forgot-password {
+    display: block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.login-form .forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    background-color: #f8d7da;
+    padding: 0.5rem;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+.footer p {
+    margin: 0.5rem 0;
+}
+.footer .social-icons {
+    padding: 0;
+    margin: 0.5rem 0;
+    list-style: none;
+}
+.footer .social-icons li {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+.footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+.footer .social-icons a:hover {
+    color: #f5f8fa;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .navbar .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+    .login-form .form-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}

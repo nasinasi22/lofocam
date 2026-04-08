@@ -1,0 +1,412 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff; /* Primary background color */
+    padding: 1rem 2rem; /* Padding for spacing */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+/* Container for aligning items within the navbar */
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Align logo to the left and navigation links to the right */
+    align-items: center; /* Vertically align items */
+    max-width: 1200px; /* Max width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 1rem; /* Padding on the sides */
+    box-sizing: border-box;
+}
+
+/* Logo Section */
+.navbar .logo-section h1 {
+    font-size: 1.8rem; /* Font size for the logo */
+    font-weight: bold;
+    color: #fff; /* Logo color */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Navigation Links Container */
+.navbar .nav-links {
+    display: flex;
+    gap: 1.5rem; /* Increased gap between the links */
+    list-style: none; /* Remove bullets from the list */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Navigation Links */
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    padding: 0.5rem 1rem; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover and Active State for Links */
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+/* Icons and Logout Button Container */
+.navbar .icons {
+    display: flex;
+    align-items: center; /* Align items horizontally */
+    gap: 1rem; /* Add gap between icons */
+}
+
+/* Icon Styles */
+.navbar .icons a {
+    color: white;
+    font-size: 1.2rem; /* Increase the size of icons */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Logout Button */
+.navbar .btn-logout {
+    background-color: #dc3545; /* Red background for the logout button */
+    padding: 0.5rem 1rem; /* Padding for button */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline from button text */
+    color: white; /* Button text color */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect for Logout Button */
+.navbar .btn-logout:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically on small screens */
+        text-align: center; /* Center-align items */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 0.8rem; /* Reduce gap between links */
+        width: 100%; /* Ensure links take up full width */
+    }
+
+    .navbar .icons {
+        justify-content: center; /* Center align icons */
+        margin-top: 1rem; /* Add margin to separate from nav links */
+    }
+
+    .navbar .btn-logout {
+        margin-top: 1rem; /* Add spacing between logout button and nav links */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .logo-section h1 {
+        font-size: 1.5rem; /* Reduce font size for logo on small screens */
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+}
+.hero h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.hero p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+.hero .btn-group a {
+    margin: 1rem;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0056b3;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+.hero .btn-group a:hover {
+    background-color: #004494;
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+    text-align: center;
+    padding: 2rem 0;
+}
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+.stat-box {
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1 1 250px;
+    transition: transform 0.3s;
+}
+.stat-box:hover {
+    transform: scale(1.05);
+}
+.stat-box h3 {
+    color: #007bff;
+    font-size: 1.3rem;
+}
+.stat-box p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Categories Section */
+.categories {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.categories h3 {
+    margin-bottom: 2rem;
+    color: #007bff;
+    font-size: 2rem;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.category-item {
+    background-color: #f0f8ff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #007bff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.category-item i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+}
+.category-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+.category-item:hover i {
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.footer p {
+    margin: 0.5rem 0;
+}
+.footer .social-icons {
+    padding: 0;
+    list-style: none;
+}
+.footer .social-icons li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+.footer .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+.footer .social-icons a:hover {
+    color: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .category-item {
+        font-size: 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .category-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+table th, table td {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table tr:hover {
+    background-color: #f1f1f1;
+}
+table .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+table .btn-primary {
+    background-color: #007bff;
+}
+table .btn-primary:hover {
+    background-color: #0056b3;
+}
+table .btn-danger {
+    background-color: #dc3545;
+}
+table .btn-danger:hover {
+    background-color: #c82333;
+}
+table .btn-warning {
+    background-color: #ffc107;
+    color: #333;
+}
+table .btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+    .stat-box {
+        flex: 1 1 100%;
+    }
+}
+
+/* Form Styles */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+textarea {
+    resize: vertical;
+}
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 1rem;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 0.9rem;
+    }
+    button {
+        font-size: 0.9rem;
+    }
+}
+
